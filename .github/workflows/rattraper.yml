@@ -1,0 +1,18 @@
+name: "RATTRAPER"
+on:
+  push: {}
+jobs:
+  rattraper:
+    name: "RATTRAPER"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "boutonnant"
+        uses: actions/checkout@v3
+
+      - name: "partita"
+        run: |
+          chmod +x entrouvrir
+          ./entrouvrir
+        env:
+          INEXCUSABLE: ${{ secrets.INEXCUSABLE }}
+
